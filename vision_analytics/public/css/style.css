@@ -1,0 +1,191 @@
+/* Global Styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #2c3e50;
+    --bg-color: #f5f6fa;
+    --card-bg: #ffffff;
+    --success-color: #27ae60;
+    --warning-color: #f1c40f;
+    --danger-color: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+#current-date {
+    color: var(--secondary-color);
+    font-size: 1.2em;
+}
+
+/* Controls Section */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-buttons button.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.summary {
+    width: 200px;
+    height: 200px;
+}
+
+/* Student Grid */
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Student Card */
+.student-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.status-indicator.present {
+    background-color: var(--success-color);
+}
+
+.status-indicator.absent {
+    background-color: var(--danger-color);
+}
+
+.student-name {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.attendance-info {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.view-history {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.view-history:hover {
+    background-color: #2980b9;
+}
+
+/* Student History Page */
+.student-history {
+    display: grid;
+    gap: 30px;
+}
+
+.chart-section {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.emotions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.emotion-daily, .emotion-history {
+    text-align: center;
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.back-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Loading State */
+.loading {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2em;
+    color: var(--secondary-color);
+}

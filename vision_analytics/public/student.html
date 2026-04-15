@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student History - Vision Analytics</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <script src="/js/lib/chart.min.js"></script>
+    <script src="/js/student_view.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="/" class="back-link">Vision Analytics</a></h1>
+            <h2 id="student-name">Loading...</h2>
+        </header>
+
+        <main class="student-history">
+            <div class="chart-section attendance-history">
+                <h3>Attendance History</h3>
+                <canvas id="attendance-chart"></canvas>
+            </div>
+
+            <div class="chart-section emotions">
+                <div class="emotion-daily">
+                    <h3>Today's Emotions</h3>
+                    <canvas id="emotion-daily-chart"></canvas>
+                </div>
+                <div class="emotion-history">
+                    <h3>Overall Emotional Profile</h3>
+                    <canvas id="emotion-history-chart"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

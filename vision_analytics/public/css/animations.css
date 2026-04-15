@@ -1,0 +1,99 @@
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.student-card {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Stagger the animation for each card */
+.student-card:nth-child(1) { animation-delay: 0.1s; }
+.student-card:nth-child(2) { animation-delay: 0.2s; }
+.student-card:nth-child(3) { animation-delay: 0.3s; }
+.student-card:nth-child(4) { animation-delay: 0.4s; }
+/* Continue for as many cards as needed */
+
+/* Status Change Animation */
+@keyframes statusPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.status-indicator.present,
+.status-indicator.absent {
+    animation: statusPulse 1s ease;
+}
+
+/* Chart Animation */
+@keyframes chartFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+canvas {
+    animation: chartFadeIn 1s ease forwards;
+}
+
+/* Loading Animation */
+@keyframes loadingDots {
+    0%, 20% {
+        content: ".";
+    }
+    40% {
+        content: "..";
+    }
+    60%, 100% {
+        content: "...";
+    }
+}
+
+.loading::after {
+    content: "";
+    animation: loadingDots 1.5s infinite;
+}
+
+/* Filter Button Animation */
+.filter-buttons button {
+    transition: all 0.3s ease;
+}
+
+.filter-buttons button:hover {
+    transform: translateY(-2px);
+}
+
+.filter-buttons button:active {
+    transform: translateY(1px);
+}
+
+/* View History Link Animation */
+.view-history {
+    transition: all 0.3s ease;
+}
+
+.view-history:hover {
+    transform: translateX(5px);
+}

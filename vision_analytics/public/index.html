@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Analytics - Attendance Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <script src="/js/lib/chart.min.js"></script>
+    <script src="/js/dashboard.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vision Analytics</h1>
+            <div id="current-date"></div>
+        </header>
+
+        <nav class="controls">
+            <div class="filter-buttons">
+                <button class="active" data-filter="all">All Students</button>
+                <button data-filter="present">Present</button>
+                <button data-filter="absent">Absent</button>
+            </div>
+            <div class="summary">
+                <canvas id="summary-chart"></canvas>
+            </div>
+        </nav>
+
+        <main>
+            <div id="loading" class="loading">
+                Loading student data...
+            </div>
+            <div id="student-grid" class="student-grid"></div>
+        </main>
+    </div>
+
+    <!-- Student card template -->
+    <template id="student-card-template">
+        <div class="student-card">
+            <div class="status-indicator"></div>
+            <h3 class="student-name"></h3>
+            <div class="attendance-info">
+                <span class="status"></span>
+                <span class="time"></span>
+            </div>
+            <a href="#" class="view-history">View History</a>
+        </div>
+    </template>
+</body>
+</html>

@@ -1,0 +1,56 @@
+# ============================
+# EDUEYE — .gitignore
+# ============================
+
+# --- Personal / Biometric Data (NEVER commit) ---
+known_face_encodings.pkl
+known_faces/*/
+!known_faces/Sample Person/
+!known_faces/Sample Person/README.txt
+!known_faces/.gitkeep
+
+# --- Generated Attendance Reports ---
+attendance_day/*.xlsx
+attendance_day/*.csv
+attendance/*.xlsx
+attendance/*.csv
+
+# --- Node.js / Vision Analytics ---
+vision_analytics/node_modules/
+vision_analytics/data/*.db
+vision_analytics/data/*.db-shm
+vision_analytics/data/*.db-wal
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+.venv/
+venv/
+env/
+ENV/
+
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
